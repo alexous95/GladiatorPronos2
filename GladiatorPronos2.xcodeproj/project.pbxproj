@@ -18,6 +18,7 @@
 		FA8AE12B255ADBBF000C22A2 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE12A255ADBBF000C22A2 /* Plans.swift */; };
 		FA8AE130255AE025000C22A2 /* PlansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE12F255AE025000C22A2 /* PlansController.swift */; };
 		FA8AE135255AE0A5000C22A2 /* PlansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE134255AE0A5000C22A2 /* PlansViewModel.swift */; };
+		FA8AE157255AF127000C22A2 /* PlansCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE156255AF127000C22A2 /* PlansCollectionCell.swift */; };
 		FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BD525594BC5000F329F /* HomeScreenController.swift */; };
 		FAD42BDB25594C00000F329F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */; };
 		FAD42BE025594C28000F329F /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDF25594C28000F329F /* Bet.swift */; };
@@ -60,6 +61,7 @@
 		FA8AE12A255ADBBF000C22A2 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		FA8AE12F255AE025000C22A2 /* PlansController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansController.swift; sourceTree = "<group>"; };
 		FA8AE134255AE0A5000C22A2 /* PlansViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansViewModel.swift; sourceTree = "<group>"; };
+		FA8AE156255AF127000C22A2 /* PlansCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansCollectionCell.swift; sourceTree = "<group>"; };
 		FAD42BD525594BC5000F329F /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		FAD42BDF25594C28000F329F /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
@@ -115,8 +117,8 @@
 		FA4F37BF255940F900DB5F97 /* GladiatorPronos2 */ = {
 			isa = PBXGroup;
 			children = (
-				FAD42BC52559442A000F329F /* View */,
 				FAD42BC42559441C000F329F /* Supporting Files */,
+				FAD42BC52559442A000F329F /* View */,
 				FAD42BC325594411000F329F /* Controller */,
 				FAD42BC2255943FD000F329F /* ViewModel */,
 				FAD42BC1255943F7000F329F /* Model */,
@@ -181,6 +183,7 @@
 				FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */,
 				FAD42BE925594C78000F329F /* SafeBetCell.swift */,
 				FA8AE11A255A8BAC000C22A2 /* WelcomeCell.swift */,
+				FA8AE156255AF127000C22A2 /* PlansCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */,
 				FAD42BE025594C28000F329F /* Bet.swift in Sources */,
 				FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */,
+				FA8AE157255AF127000C22A2 /* PlansCollectionCell.swift in Sources */,
 				FA8AE130255AE025000C22A2 /* PlansController.swift in Sources */,
 				FA8AE135255AE0A5000C22A2 /* PlansViewModel.swift in Sources */,
 				FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */,
