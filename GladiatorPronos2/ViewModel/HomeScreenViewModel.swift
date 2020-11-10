@@ -52,4 +52,14 @@ class HomeScreenViewModel {
         
         return category + " " + dateString
     }
+    
+    func getWelcomeText() -> String {
+        let text = """
+TOUS LES OUTILS POUR RÉUSSIR
+PROFITEZ DE NOUVEAUX PRONOSTICS SAFES ET FUNS PRATIQUEMENT TOUT LES JOURS !
+NOS EXPERTS ANALYSENT LES PRONOSTICS AVANT DE LES POSTER.
+"""
+        
+        return text
+    }
 }

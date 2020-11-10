@@ -22,14 +22,17 @@ class HomeScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.downloadBets()
-        tableView.delegate = self
-        tableView.dataSource = self
+        configureTableView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
     
+    private func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
 }
 
 
@@ -57,7 +60,14 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "welcomeCell", for: indexPath) as? WelcomeCell else {
+                return UITableViewCell()
+            }
+            
+            let text = viewModel.getWelcomeText()
+            cell.configure(welcomeText: text)
+            
+            return cell
             
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "betCell", for: indexPath) as? SafeBetCell else {
@@ -77,9 +87,15 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-        func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return nil
+        default:
             return " "
         }
+    }
+    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 30))
@@ -89,6 +105,8 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
         label.font = .preferredFont(forTextStyle: .title3, compatibleWith: .none)
         
         switch section {
+        case 0:
+            return nil
         case 1:
             label.text = "NOS DERNIERS PRONOS"
             headerView.addSubview(label)
