@@ -281,8 +281,15 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F54-lr-eLp">
-                                                    <rect key="frame" x="165.5" y="291.5" width="83" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                    <rect key="frame" x="103.5" y="286.5" width="207" height="35"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="AgencyFB-Reg" family="Agency FB" pointSize="19"/>
+                                                    <state key="normal" title="Voir nos abonnements">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="V99-4f-YyW" kind="presentation" id="GcA-Nt-WxF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,7 +302,7 @@
                                                 <constraint firstItem="viF-YU-c5p" firstAttribute="bottom" secondItem="bmP-1Y-wG7" secondAttribute="bottomMargin" constant="11" id="TIe-G1-NVN"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="pxR-Rd-qFA" secondAttribute="trailing" id="gGG-xr-r7k"/>
                                                 <constraint firstItem="F54-lr-eLp" firstAttribute="centerX" secondItem="bmP-1Y-wG7" secondAttribute="centerX" id="pHH-JJ-VZ4"/>
-                                                <constraint firstItem="F54-lr-eLp" firstAttribute="width" secondItem="viF-YU-c5p" secondAttribute="width" multiplier="0.2" id="thZ-C9-EHu"/>
+                                                <constraint firstItem="F54-lr-eLp" firstAttribute="width" secondItem="viF-YU-c5p" secondAttribute="width" multiplier="0.5" id="thZ-C9-EHu"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="F54-lr-eLp" secondAttribute="bottom" constant="5" id="x16-af-Blf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -326,6 +333,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YyL-rP-bFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2944.9275362318845" y="-395.08928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LTs-ky-yP8">
+            <objects>
+                <viewController id="V99-4f-YyW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vKU-r3-mjH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0pC-IX-qmQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fYY-Qs-e2W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9d-0w-V5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3814" y="-921"/>
         </scene>
     </scenes>
     <resources>

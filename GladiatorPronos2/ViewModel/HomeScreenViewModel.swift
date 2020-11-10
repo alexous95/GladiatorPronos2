@@ -24,10 +24,10 @@ class HomeScreenViewModel {
                     WinningBet(bets: [Bet(category: "SAFE", date: Date(), title: "FC SEVILLE - KRASNODAR", pronostic: "FC SEVILLE GAGNANT", rating: 1.69),
                                       Bet(category: "SAFE", date: Date(), title: "CHELSEA - RENNES", pronostic: "CHELSEA GAGNANT", rating: 0.01)]),
                     WinningBet(bets: [Bet(category: "SAFE", date: Date(), title: "FC PORTO - OLYMPIQUE DE MARSEILLE", pronostic: "FC PORTO OU MATCH NUL", rating: 1.54),
-                                                  Bet(category: "Safe", date: Date(), title: "MANCHESTER CITY - OLYMPIAKOS", pronostic: "MANCHESTER CITY GAGNANT", rating: 0.01)]),
-                                WinningBet(bets: [Bet(category: "SAFE", date: Date(), title: "FC SEVILLE - KRASNODAR", pronostic: "FC SEVILLE GAGNANT", rating: 1.69),
-                                                  Bet(category: "SAFE", date: Date(), title: "CHELSEA - RENNES", pronostic: "CHELSEA GAGNANT", rating: 0.01)])
-                    ]
+                                      Bet(category: "Safe", date: Date(), title: "MANCHESTER CITY - OLYMPIAKOS", pronostic: "MANCHESTER CITY GAGNANT", rating: 0.01)]),
+                    WinningBet(bets: [Bet(category: "SAFE", date: Date(), title: "FC SEVILLE - KRASNODAR", pronostic: "FC SEVILLE GAGNANT", rating: 1.69),
+                                      Bet(category: "SAFE", date: Date(), title: "CHELSEA - RENNES", pronostic: "CHELSEA GAGNANT", rating: 0.01)])
+        ]
         
         winningBets = bets
     }
