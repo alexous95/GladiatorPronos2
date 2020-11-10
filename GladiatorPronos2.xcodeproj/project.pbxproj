@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C0255940F900DB5F97 /* AppDelegate.swift */; };
+		FA4F37C3255940F900DB5F97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */; };
+		FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C4255940F900DB5F97 /* LoginController.swift */; };
+		FA4F37C8255940F900DB5F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4F37C6255940F900DB5F97 /* Main.storyboard */; };
+		FA4F37CA255940FB00DB5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4F37C9255940FB00DB5F97 /* Assets.xcassets */; };
+		FA4F37CD255940FB00DB5F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */; };
+		FA4F37D8255940FC00DB5F97 /* GladiatorPronos2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37D7255940FC00DB5F97 /* GladiatorPronos2Tests.swift */; };
+		FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BD525594BC5000F329F /* HomeScreenController.swift */; };
+		FAD42BDB25594C00000F329F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */; };
+		FAD42BE025594C28000F329F /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDF25594C28000F329F /* Bet.swift */; };
+		FAD42BE525594C46000F329F /* WinningBet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BE425594C46000F329F /* WinningBet.swift */; };
+		FAD42BEA25594C78000F329F /* SafeBetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BE925594C78000F329F /* SafeBetCell.swift */; };
+		FAD42BFF25598883000F329F /* AgencyFB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD42BFE25598883000F329F /* AgencyFB.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA4F37D4255940FC00DB5F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA4F37B5255940F900DB5F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA4F37BC255940F900DB5F97;
+			remoteInfo = GladiatorPronos2;
+		};
+		FA4F37DF255940FC00DB5F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA4F37B5255940F900DB5F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA4F37BC255940F900DB5F97;
+			remoteInfo = GladiatorPronos2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA4F37BD255940F900DB5F97 /* GladiatorPronos2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GladiatorPronos2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4F37C0255940F900DB5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA4F37C4255940F900DB5F97 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FA4F37C7255940F900DB5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA4F37C9255940FB00DB5F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA4F37CC255940FB00DB5F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA4F37CE255940FB00DB5F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4F37D3255940FC00DB5F97 /* GladiatorPronos2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GladiatorPronos2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4F37D7255940FC00DB5F97 /* GladiatorPronos2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GladiatorPronos2Tests.swift; sourceTree = "<group>"; };
+		FA4F37D9255940FC00DB5F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4F37DE255940FC00DB5F97 /* GladiatorPronos2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GladiatorPronos2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD42BD525594BC5000F329F /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		FAD42BDF25594C28000F329F /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
+		FAD42BE425594C46000F329F /* WinningBet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningBet.swift; sourceTree = "<group>"; };
+		FAD42BE925594C78000F329F /* SafeBetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeBetCell.swift; sourceTree = "<group>"; };
+		FAD42BFE25598883000F329F /* AgencyFB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AgencyFB.ttf; path = ../../../../../Downloads/AgencyFB.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA4F37BA255940F900DB5F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37D0255940FC00DB5F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37DB255940FC00DB5F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA4F37B4255940F900DB5F97 = {
+			isa = PBXGroup;
+			children = (
+				FA4F37BF255940F900DB5F97 /* GladiatorPronos2 */,
+				FA4F37D6255940FC00DB5F97 /* GladiatorPronos2Tests */,
+				FA4F37BE255940F900DB5F97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA4F37BE255940F900DB5F97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F37BD255940F900DB5F97 /* GladiatorPronos2.app */,
+				FA4F37D3255940FC00DB5F97 /* GladiatorPronos2Tests.xctest */,
+				FA4F37DE255940FC00DB5F97 /* GladiatorPronos2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA4F37BF255940F900DB5F97 /* GladiatorPronos2 */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BC52559442A000F329F /* View */,
+				FAD42BC42559441C000F329F /* Supporting Files */,
+				FAD42BC325594411000F329F /* Controller */,
+				FAD42BC2255943FD000F329F /* ViewModel */,
+				FAD42BC1255943F7000F329F /* Model */,
+				FA4F37CE255940FB00DB5F97 /* Info.plist */,
+			);
+			path = GladiatorPronos2;
+			sourceTree = "<group>";
+		};
+		FA4F37D6255940FC00DB5F97 /* GladiatorPronos2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F37D7255940FC00DB5F97 /* GladiatorPronos2Tests.swift */,
+				FA4F37D9255940FC00DB5F97 /* Info.plist */,
+			);
+			path = GladiatorPronos2Tests;
+			sourceTree = "<group>";
+		};
+		FAD42BC1255943F7000F329F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BDF25594C28000F329F /* Bet.swift */,
+				FAD42BE425594C46000F329F /* WinningBet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD42BC2255943FD000F329F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAD42BC325594411000F329F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F37C4255940F900DB5F97 /* LoginController.swift */,
+				FAD42BD525594BC5000F329F /* HomeScreenController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAD42BC42559441C000F329F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BF02559878E000F329F /* Fonts */,
+				FA4F37C0255940F900DB5F97 /* AppDelegate.swift */,
+				FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */,
+				FA4F37C9255940FB00DB5F97 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD42BC52559442A000F329F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F37C6255940F900DB5F97 /* Main.storyboard */,
+				FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */,
+				FAD42BE925594C78000F329F /* SafeBetCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAD42BF02559878E000F329F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BFE25598883000F329F /* AgencyFB.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA4F37BC255940F900DB5F97 /* GladiatorPronos2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4F37E7255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2" */;
+			buildPhases = (
+				FA4F37B9255940F900DB5F97 /* Sources */,
+				FA4F37BA255940F900DB5F97 /* Frameworks */,
+				FA4F37BB255940F900DB5F97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GladiatorPronos2;
+			productName = GladiatorPronos2;
+			productReference = FA4F37BD255940F900DB5F97 /* GladiatorPronos2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA4F37D2255940FC00DB5F97 /* GladiatorPronos2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4F37EA255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2Tests" */;
+			buildPhases = (
+				FA4F37CF255940FC00DB5F97 /* Sources */,
+				FA4F37D0255940FC00DB5F97 /* Frameworks */,
+				FA4F37D1255940FC00DB5F97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA4F37D5255940FC00DB5F97 /* PBXTargetDependency */,
+			);
+			name = GladiatorPronos2Tests;
+			productName = GladiatorPronos2Tests;
+			productReference = FA4F37D3255940FC00DB5F97 /* GladiatorPronos2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA4F37DD255940FC00DB5F97 /* GladiatorPronos2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4F37ED255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2UITests" */;
+			buildPhases = (
+				FA4F37DA255940FC00DB5F97 /* Sources */,
+				FA4F37DB255940FC00DB5F97 /* Frameworks */,
+				FA4F37DC255940FC00DB5F97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA4F37E0255940FC00DB5F97 /* PBXTargetDependency */,
+			);
+			name = GladiatorPronos2UITests;
+			productName = GladiatorPronos2UITests;
+			productReference = FA4F37DE255940FC00DB5F97 /* GladiatorPronos2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA4F37B5255940F900DB5F97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					FA4F37BC255940F900DB5F97 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					FA4F37D2255940FC00DB5F97 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = FA4F37BC255940F900DB5F97;
+					};
+					FA4F37DD255940FC00DB5F97 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = FA4F37BC255940F900DB5F97;
+					};
+				};
+			};
+			buildConfigurationList = FA4F37B8255940F900DB5F97 /* Build configuration list for PBXProject "GladiatorPronos2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA4F37B4255940F900DB5F97;
+			productRefGroup = FA4F37BE255940F900DB5F97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA4F37BC255940F900DB5F97 /* GladiatorPronos2 */,
+				FA4F37D2255940FC00DB5F97 /* GladiatorPronos2Tests */,
+				FA4F37DD255940FC00DB5F97 /* GladiatorPronos2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA4F37BB255940F900DB5F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD42BFF25598883000F329F /* AgencyFB.ttf in Resources */,
+				FA4F37CD255940FB00DB5F97 /* LaunchScreen.storyboard in Resources */,
+				FA4F37CA255940FB00DB5F97 /* Assets.xcassets in Resources */,
+				FA4F37C8255940F900DB5F97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37D1255940FC00DB5F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37DC255940FC00DB5F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA4F37B9255940F900DB5F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */,
+				FAD42BE025594C28000F329F /* Bet.swift in Sources */,
+				FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */,
+				FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */,
+				FA4F37C3255940F900DB5F97 /* SceneDelegate.swift in Sources */,
+				FAD42BE525594C46000F329F /* WinningBet.swift in Sources */,
+				FAD42BEA25594C78000F329F /* SafeBetCell.swift in Sources */,
+				FAD42BDB25594C00000F329F /* HomeScreenViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37CF255940FC00DB5F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4F37D8255940FC00DB5F97 /* GladiatorPronos2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA4F37DA255940FC00DB5F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA4F37D5255940FC00DB5F97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA4F37BC255940F900DB5F97 /* GladiatorPronos2 */;
+			targetProxy = FA4F37D4255940FC00DB5F97 /* PBXContainerItemProxy */;
+		};
+		FA4F37E0255940FC00DB5F97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA4F37BC255940F900DB5F97 /* GladiatorPronos2 */;
+			targetProxy = FA4F37DF255940FC00DB5F97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA4F37C6255940F900DB5F97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4F37C7255940F900DB5F97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4F37CC255940FB00DB5F97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA4F37E5255940FC00DB5F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA4F37E6255940FC00DB5F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA4F37E8255940FC00DB5F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA4F37E9255940FC00DB5F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA4F37EB255940FC00DB5F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GladiatorPronos2.app/GladiatorPronos2";
+			};
+			name = Debug;
+		};
+		FA4F37EC255940FC00DB5F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GladiatorPronos2.app/GladiatorPronos2";
+			};
+			name = Release;
+		};
+		FA4F37EE255940FC00DB5F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GladiatorPronos2;
+			};
+			name = Debug;
+		};
+		FA4F37EF255940FC00DB5F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZA4KZTM88P;
+				INFOPLIST_FILE = GladiatorPronos2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GladiatorPronos2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GladiatorPronos2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA4F37B8255940F900DB5F97 /* Build configuration list for PBXProject "GladiatorPronos2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4F37E5255940FC00DB5F97 /* Debug */,
+				FA4F37E6255940FC00DB5F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4F37E7255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4F37E8255940FC00DB5F97 /* Debug */,
+				FA4F37E9255940FC00DB5F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4F37EA255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4F37EB255940FC00DB5F97 /* Debug */,
+				FA4F37EC255940FC00DB5F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4F37ED255940FC00DB5F97 /* Build configuration list for PBXNativeTarget "GladiatorPronos2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4F37EE255940FC00DB5F97 /* Debug */,
+				FA4F37EF255940FC00DB5F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA4F37B5255940F900DB5F97 /* Project object */;
+}
