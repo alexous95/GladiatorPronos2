@@ -15,6 +15,7 @@ class AccountController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var gladiatorImage: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Variables
     
@@ -26,6 +27,7 @@ class AccountController: UIViewController {
         super.viewDidLoad()
         roundedTopView()
         setupView()
+        setupDelegates()
     }
     
     override func viewDidLayoutSubviews() {
@@ -33,6 +35,14 @@ class AccountController: UIViewController {
         gradient.frame = topAccountView.bounds
         setupGradient(gradient: gradient)
     }
+    
+    // MARK: - Delegates
+    
+    private func setupDelegates() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    // MARK: - UI
     
     private func setupGradient(gradient: CAGradientLayer) {
         guard let startColor = UIColor(named: "SafeBetStartColor") else {
@@ -51,6 +61,7 @@ class AccountController: UIViewController {
     private func roundedTopView() {
         topAccountView.layer.cornerRadius = 35
         topAccountView.layer.masksToBounds = true
+        
     }
     
     private func setupView() {
@@ -63,4 +74,46 @@ class AccountController: UIViewController {
         gladiatorImage.layer.borderColor = UIColor.white.cgColor
         gladiatorImage.layer.masksToBounds = true
     }
+}
+
+// MARK: - Collection View Extension
+
+extension AccountController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.item {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recapCell", for: indexPath) as? recapCollectionCell else {
+                return UICollectionViewCell()
+            }
+            
+            let user = User.array[0]
+            cell.configure(memberDate: "10 Octobre 2020", isPremium: user.isPremium , isAdmin: user.admin)
+            return cell
+            
+            // Le cas 1 servira pour modifier son profil plus tard
+            // On utilise ce cas pour demonstration
+        
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recapCell", for: indexPath) as? recapCollectionCell else {
+                return UICollectionViewCell()
+            }
+            
+            cell.configure(memberDate: "24 Octobre 2020", isPremium: false , isAdmin: false)
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: (view.frame.width / 1.3), height: (view.frame.height / 2.7))
+    }
+    
 }

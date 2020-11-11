@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA4976BC255C71E700EA1C94 /* recapCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */; };
 		FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C0255940F900DB5F97 /* AppDelegate.swift */; };
 		FA4F37C3255940F900DB5F97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */; };
 		FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C4255940F900DB5F97 /* LoginController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recapCollectionCell.swift; sourceTree = "<group>"; };
 		FA4F37BD255940F900DB5F97 /* GladiatorPronos2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GladiatorPronos2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4F37C0255940F900DB5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4976B5255C655900EA1C94 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA4976B9255C71AD00EA1C94 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				FAD42BE925594C78000F329F /* SafeBetCell.swift */,
+				FA8AE11A255A8BAC000C22A2 /* WelcomeCell.swift */,
+				FA8AE156255AF127000C22A2 /* PlansCollectionCell.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		FA4976BA255C71C200EA1C94 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		FA4F37B4255940F900DB5F97 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +154,7 @@
 		FA4F37BF255940F900DB5F97 /* GladiatorPronos2 */ = {
 			isa = PBXGroup;
 			children = (
+				FA4976B5255C655900EA1C94 /* Extension */,
 				FA8AE185255C117C000C22A2 /* Services */,
 				FAD42BC42559441C000F329F /* Supporting Files */,
 				FAD42BC52559442A000F329F /* View */,
@@ -218,11 +246,10 @@
 		FAD42BC52559442A000F329F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA4976BA255C71C200EA1C94 /* Account */,
+				FA4976B9255C71AD00EA1C94 /* Welcome */,
 				FA4F37C6255940F900DB5F97 /* Main.storyboard */,
 				FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */,
-				FAD42BE925594C78000F329F /* SafeBetCell.swift */,
-				FA8AE11A255A8BAC000C22A2 /* WelcomeCell.swift */,
-				FA8AE156255AF127000C22A2 /* PlansCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +407,7 @@
 				FA8AE173255BE85C000C22A2 /* LoginViewModel.swift in Sources */,
 				FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */,
 				FA4F37C3255940F900DB5F97 /* SceneDelegate.swift in Sources */,
+				FA4976BC255C71E700EA1C94 /* recapCollectionCell.swift in Sources */,
 				FA8AE12B255ADBBF000C22A2 /* Plans.swift in Sources */,
 				FAD42BE525594C46000F329F /* WinningBet.swift in Sources */,
 				FAD42BEA25594C78000F329F /* SafeBetCell.swift in Sources */,
