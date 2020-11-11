@@ -16,6 +16,10 @@ class LoginController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Variable
+    
+    var viewModel = LoginViewModel()
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -42,6 +46,15 @@ class LoginController: UIViewController {
         gradient.colors = [startColor.cgColor, endColor.cgColor]
         
         view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeScreenSegue" {
+            let barViewControllers = segue.destination as! UITabBarController
+            let nav = barViewControllers.viewControllers![0] as! UINavigationController
+            let destination = nav.topViewController as! HomeScreenController
+            destination.viewModel.user = viewModel.user
+        }
     }
     
     /// Sets up the image for the login screen
@@ -96,6 +109,12 @@ class LoginController: UIViewController {
         loginButton.layer.borderColor = UIColor.white.cgColor
         loginButton.layer.masksToBounds = true
     }
+    
+    // MARK: - Action
+    @IBAction func login(_ sender: Any) {
+        viewModel.login()
+    }
+    
     
     // MARK: - Animations
     

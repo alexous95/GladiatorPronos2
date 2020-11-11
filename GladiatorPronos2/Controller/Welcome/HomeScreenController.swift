@@ -27,6 +27,12 @@ class HomeScreenController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        guard let user = viewModel.user else {
+            print("ca marche pas")
+            return
+        }
+        
+        print(user.firstName + " " + user.lastName)
     }
     
     private func configureTableView() {

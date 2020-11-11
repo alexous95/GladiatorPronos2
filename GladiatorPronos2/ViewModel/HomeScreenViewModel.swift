@@ -13,6 +13,7 @@ class HomeScreenViewModel {
     // MARK: - Variables
     
     var winningBets: [WinningBet] = []
+    var user: User?
     
     // MARK: - Networking
     
