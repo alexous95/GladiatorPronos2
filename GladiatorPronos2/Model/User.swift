@@ -26,4 +26,6 @@ struct User: Codable {
     let currentPlan, cardLast4, cardExpMonth, cardExpYear: String
     let cardType, stripeToken: String
     let promotionExclusivity: Bool
+    
+    static var array = [User]()
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -103,21 +104,74 @@
             </objects>
             <point key="canvasLocation" x="980" y="94"/>
         </scene>
-        <!--Item-->
+        <!--Compte-->
         <scene sceneID="f6Z-3u-zlj">
             <objects>
-                <viewController id="97g-Yp-aOM" sceneMemberID="viewController">
+                <viewController id="97g-Yp-aOM" customClass="AccountController" customModule="GladiatorPronos2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHK-wm-Oaq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmi-eg-0Y1">
+                                <rect key="frame" x="0.0" y="-6" width="414" height="269"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FoT-Vu-1Y5">
+                                        <rect key="frame" x="183" y="190" width="48" height="49.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqg-6E-EfK">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="So7-CQ-xqN">
+                                                <rect key="frame" x="0.0" y="29" width="48" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lmw-NC-bhf">
+                                        <rect key="frame" x="147" y="40" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="JnT-cp-hbO"/>
+                                            <constraint firstAttribute="width" constant="120" id="stP-vt-A0d"/>
+                                        </constraints>
+                                        <imageReference key="image" image="GladiatorWhite" renderingMode="original"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="Lmw-NC-bhf" firstAttribute="top" secondItem="vmi-eg-0Y1" secondAttribute="top" constant="40" id="3da-g0-mlT"/>
+                                    <constraint firstItem="So7-CQ-xqN" firstAttribute="width" relation="lessThanOrEqual" secondItem="vmi-eg-0Y1" secondAttribute="width" multiplier="0.7" id="86q-dg-GNq"/>
+                                    <constraint firstItem="FoT-Vu-1Y5" firstAttribute="centerX" secondItem="vmi-eg-0Y1" secondAttribute="centerX" id="Rbt-lO-6K2"/>
+                                    <constraint firstItem="Lmw-NC-bhf" firstAttribute="centerX" secondItem="vmi-eg-0Y1" secondAttribute="centerX" id="Z1M-2W-qKs"/>
+                                    <constraint firstItem="FoT-Vu-1Y5" firstAttribute="top" secondItem="Lmw-NC-bhf" secondAttribute="bottom" constant="30" id="ZQe-o0-oQq"/>
+                                    <constraint firstItem="Yqg-6E-EfK" firstAttribute="width" relation="lessThanOrEqual" secondItem="vmi-eg-0Y1" secondAttribute="width" multiplier="0.7" id="nnH-5Y-fe7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="b8T-tI-M72"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="b8T-tI-M72" firstAttribute="trailing" secondItem="vmi-eg-0Y1" secondAttribute="trailing" id="HtV-ey-9CV"/>
+                            <constraint firstItem="vmi-eg-0Y1" firstAttribute="height" secondItem="MHK-wm-Oaq" secondAttribute="height" multiplier="0.3" id="Mue-4G-TM8"/>
+                            <constraint firstItem="vmi-eg-0Y1" firstAttribute="top" secondItem="b8T-tI-M72" secondAttribute="top" constant="-50" id="aZm-Tg-lN6"/>
+                            <constraint firstItem="vmi-eg-0Y1" firstAttribute="leading" secondItem="b8T-tI-M72" secondAttribute="leading" id="eSa-IX-sWl"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="BS1-td-qzq"/>
+                    <tabBarItem key="tabBarItem" title="Compte" image="person.fill" catalog="system" id="BS1-td-qzq"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="So7-CQ-xqN" id="5EV-6q-4Zp"/>
+                        <outlet property="gladiatorImage" destination="Lmw-NC-bhf" id="Y61-KY-D0W"/>
+                        <outlet property="nameLabel" destination="Yqg-6E-EfK" id="Oha-Ew-PTK"/>
+                        <outlet property="topAccountView" destination="vmi-eg-0Y1" id="1hm-Dr-7F2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6UV-hU-LO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="94"/>
+            <point key="canvasLocation" x="1898.5507246376812" y="93.75"/>
         </scene>
         <!--Accueil-->
         <scene sceneID="GHM-sn-9yI">
@@ -336,7 +390,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ihk-Pe-UMh"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="81h-w0-9W5" firstAttribute="top" secondItem="Ihk-Pe-UMh" secondAttribute="top" id="8hu-X1-0lk"/>
                             <constraint firstItem="81h-w0-9W5" firstAttribute="leading" secondItem="Ihk-Pe-UMh" secondAttribute="leading" id="UMk-np-UIu"/>
@@ -477,7 +531,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0pC-IX-qmQ"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="38k-dg-QTa" firstAttribute="leading" secondItem="0pC-IX-qmQ" secondAttribute="leading" id="6iB-V2-7Ou"/>
                             <constraint firstItem="0pC-IX-qmQ" firstAttribute="trailing" secondItem="38k-dg-QTa" secondAttribute="trailing" id="9es-LC-tmC"/>
@@ -499,10 +553,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GladiatorWhite" width="1000" height="1000"/>
         <image name="Messi" width="600" height="337.5"/>
         <image name="WinningIcon" width="2083.5" height="2083.5"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -514,6 +570,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

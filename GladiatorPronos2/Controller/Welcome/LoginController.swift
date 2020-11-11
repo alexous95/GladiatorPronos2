@@ -54,6 +54,10 @@ class LoginController: UIViewController {
             let nav = barViewControllers.viewControllers![0] as! UINavigationController
             let destination = nav.topViewController as! HomeScreenController
             destination.viewModel.user = viewModel.user
+            guard let user = viewModel.user else {
+                return
+            }
+            User.array.append(user)
         }
     }
     
