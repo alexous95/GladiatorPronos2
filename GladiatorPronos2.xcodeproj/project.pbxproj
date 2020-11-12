@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA4976BC255C71E700EA1C94 /* recapCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */; };
+		FA4976CC255D7DE900EA1C94 /* ModifCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4976CB255D7DE900EA1C94 /* ModifCollectionCell.swift */; };
+		FA4976D1255D8F2E00EA1C94 /* UIView+gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4976D0255D8F2E00EA1C94 /* UIView+gradient.swift */; };
 		FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C0255940F900DB5F97 /* AppDelegate.swift */; };
 		FA4F37C3255940F900DB5F97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */; };
 		FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37C4255940F900DB5F97 /* LoginController.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recapCollectionCell.swift; sourceTree = "<group>"; };
+		FA4976CB255D7DE900EA1C94 /* ModifCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifCollectionCell.swift; sourceTree = "<group>"; };
+		FA4976D0255D8F2E00EA1C94 /* UIView+gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+gradient.swift"; sourceTree = "<group>"; };
 		FA4F37BD255940F900DB5F97 /* GladiatorPronos2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GladiatorPronos2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4F37C0255940F900DB5F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4F37C2255940F900DB5F97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		FA4976B5255C655900EA1C94 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FA4976D0255D8F2E00EA1C94 /* UIView+gradient.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4976BB255C71E700EA1C94 /* recapCollectionCell.swift */,
+				FA4976CB255D7DE900EA1C94 /* ModifCollectionCell.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */,
 				FAD42BE025594C28000F329F /* Bet.swift in Sources */,
 				FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */,
+				FA4976CC255D7DE900EA1C94 /* ModifCollectionCell.swift in Sources */,
 				FA8AE196255C261A000C22A2 /* AccountController.swift in Sources */,
 				FA8AE187255C1199000C22A2 /* NetworkManager.swift in Sources */,
 				FA8AE157255AF127000C22A2 /* PlansCollectionCell.swift in Sources */,
@@ -411,6 +418,7 @@
 				FA8AE12B255ADBBF000C22A2 /* Plans.swift in Sources */,
 				FAD42BE525594C46000F329F /* WinningBet.swift in Sources */,
 				FAD42BEA25594C78000F329F /* SafeBetCell.swift in Sources */,
+				FA4976D1255D8F2E00EA1C94 /* UIView+gradient.swift in Sources */,
 				FAD42BDB25594C00000F329F /* HomeScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

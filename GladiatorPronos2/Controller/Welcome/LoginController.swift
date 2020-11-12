@@ -19,12 +19,12 @@ class LoginController: UIViewController {
     // MARK: - Variable
     
     var viewModel = LoginViewModel()
-    
+    let gradient = CAGradientLayer()
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGradient()
+        view.setupGradient(gradient: gradient, startColor: UIColor.black.cgColor, endColor: UIColor.red.cgColor, view: view)
         setupImage()
         setupTextFields()
         setupDelegateTF()
@@ -37,16 +37,16 @@ class LoginController: UIViewController {
     /// Sets up the gradient for the background
     ///
     /// Add a gradient as our background
-    private func setupGradient() {
-        let startColor = UIColor.black
-        let endColor = UIColor.systemRed
-        let gradient = CAGradientLayer()
-        
-        gradient.frame = view.bounds
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        
-        view.layer.insertSublayer(gradient, at: 0)
-    }
+//    private func setupGradient() {
+//        let startColor = UIColor.black
+//        let endColor = UIColor.systemRed
+//        let gradient = CAGradientLayer()
+//
+//        gradient.frame = view.bounds
+//        gradient.colors = [startColor.cgColor, endColor.cgColor]
+//
+//        view.layer.insertSublayer(gradient, at: 0)
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "homeScreenSegue" {

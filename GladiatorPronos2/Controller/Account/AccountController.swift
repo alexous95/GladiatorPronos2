@@ -91,29 +91,35 @@ extension AccountController: UICollectionViewDelegate, UICollectionViewDataSourc
             }
             
             let user = User.array[0]
-            cell.configure(memberDate: "10 Octobre 2020", isPremium: user.isPremium , isAdmin: user.admin)
-            return cell
+            cell.configure(memberDate: "10 Octobre 2020", isPremium: user.isPremium , isAdmin: user.admin, plan: user.currentPlan)
             
-            // Le cas 1 servira pour modifier son profil plus tard
-            // On utilise ce cas pour demonstration
+            return cell
         
         case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "modifCell", for: indexPath) as? ModifCollectionCell else {
+                return UICollectionViewCell()
+            }
+            
+            let user = User.array[0]
+            cell.configure(firstName: user.firstName, lastName: user.lastName, email: user.email)
+            
+            return cell
+            
+        case 2:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recapCell", for: indexPath) as? recapCollectionCell else {
                 return UICollectionViewCell()
             }
             
-            cell.configure(memberDate: "24 Octobre 2020", isPremium: false , isAdmin: false)
+            cell.configure(memberDate: "24 Octobre 2020", isPremium: false , isAdmin: false, plan: "1 mois")
             return cell
             
         default:
             return UICollectionViewCell()
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (view.frame.width / 1.3), height: (view.frame.height / 2.7))
+            return CGSize(width: (view.frame.width / 1.3), height: (view.frame.height / 2.65))
     }
-    
 }

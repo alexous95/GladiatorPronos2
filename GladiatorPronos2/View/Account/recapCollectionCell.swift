@@ -14,6 +14,7 @@ class recapCollectionCell: UICollectionViewCell {
     @IBOutlet weak var memberDate: UILabel!
     @IBOutlet weak var premiumLabel: UILabel!
     @IBOutlet weak var adminLabel: UILabel!
+    @IBOutlet weak var planLabel: UILabel!
     
     // MARK: - Variables
     
@@ -24,40 +25,27 @@ class recapCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
-        setupGradient(gradient: gradient)
+        setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor", view: contentView)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         gradient.frame = contentView.bounds
-        setupGradient(gradient: gradient)
+        setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor", view: contentView)
     }
     
     // MARK: - UI
     
     private func setupUI() {
-        contentView.layer.cornerRadius = 20
+        contentView.layer.cornerRadius = 25
         contentView.layer.masksToBounds = true
-    }
-    
-    private func setupGradient(gradient: CAGradientLayer) {
-        guard let startColor = UIColor(named: "SafeBetStartColor") else {
-            return
-        }
-        guard let endColor = UIColor(named: "SafeBetEndColor") else {
-            return
-        }
-        
-        gradient.frame = contentView.bounds
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        
-        contentView.layer.insertSublayer(gradient, at: 0)
     }
     
     // MARK: - Configuration
     
-    func configure(memberDate: String, isPremium: Bool, isAdmin: Bool) {
+    func configure(memberDate: String, isPremium: Bool, isAdmin: Bool, plan: String) {
         self.memberDate.text = "Membre depuis le " + memberDate
+        self.planLabel.text = "Abonnement de " + plan
         
         if isPremium {
             premiumLabel.text = "Membre premium"
