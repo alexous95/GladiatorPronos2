@@ -28,7 +28,6 @@ class WelcomeCell: UITableViewCell {
     /// Configures the cell
     func configure(welcomeText: String) {
         // We will use the downloaded image later
-        
         self.welcomeText.text = welcomeText
     }
 
