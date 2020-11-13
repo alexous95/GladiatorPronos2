@@ -17,6 +17,7 @@
 		FA4F37CA255940FB00DB5F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4F37C9255940FB00DB5F97 /* Assets.xcassets */; };
 		FA4F37CD255940FB00DB5F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4F37CB255940FB00DB5F97 /* LaunchScreen.storyboard */; };
 		FA4F37D8255940FC00DB5F97 /* GladiatorPronos2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F37D7255940FC00DB5F97 /* GladiatorPronos2Tests.swift */; };
+		FA78C2D3255EA17700DD166E /* UIView+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78C2D2255EA17700DD166E /* UIView+RoundedCorner.swift */; };
 		FA8AE11B255A8BAC000C22A2 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE11A255A8BAC000C22A2 /* WelcomeCell.swift */; };
 		FA8AE12B255ADBBF000C22A2 /* Plans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE12A255ADBBF000C22A2 /* Plans.swift */; };
 		FA8AE130255AE025000C22A2 /* PlansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE12F255AE025000C22A2 /* PlansController.swift */; };
@@ -27,6 +28,9 @@
 		FA8AE17B255BE8E8000C22A2 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = FA8AE17A255BE8E7000C22A2 /* user.json */; };
 		FA8AE187255C1199000C22A2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE186255C1199000C22A2 /* NetworkManager.swift */; };
 		FA8AE196255C261A000C22A2 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AE195255C261A000C22A2 /* AccountController.swift */; };
+		FAA70C8E255EA8B1000EB1DD /* UITextField+CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA70C8D255EA8B0000EB1DD /* UITextField+CustomTextFields.swift */; };
+		FAA70C9C255EAF94000EB1DD /* UIButton+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA70C9B255EAF94000EB1DD /* UIButton+Rounded.swift */; };
+		FAADC258255E88E20080CCE7 /* SportPronosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADC257255E88E20080CCE7 /* SportPronosController.swift */; };
 		FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BD525594BC5000F329F /* HomeScreenController.swift */; };
 		FAD42BDB25594C00000F329F /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */; };
 		FAD42BE025594C28000F329F /* Bet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD42BDF25594C28000F329F /* Bet.swift */; };
@@ -68,6 +72,7 @@
 		FA4F37D7255940FC00DB5F97 /* GladiatorPronos2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GladiatorPronos2Tests.swift; sourceTree = "<group>"; };
 		FA4F37D9255940FC00DB5F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA4F37DE255940FC00DB5F97 /* GladiatorPronos2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GladiatorPronos2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA78C2D2255EA17700DD166E /* UIView+RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorner.swift"; sourceTree = "<group>"; };
 		FA8AE11A255A8BAC000C22A2 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		FA8AE12A255ADBBF000C22A2 /* Plans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plans.swift; sourceTree = "<group>"; };
 		FA8AE12F255AE025000C22A2 /* PlansController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlansController.swift; sourceTree = "<group>"; };
@@ -78,6 +83,9 @@
 		FA8AE17A255BE8E7000C22A2 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = user.json; path = ../../../user.json; sourceTree = "<group>"; };
 		FA8AE186255C1199000C22A2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA8AE195255C261A000C22A2 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		FAA70C8D255EA8B0000EB1DD /* UITextField+CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+CustomTextFields.swift"; sourceTree = "<group>"; };
+		FAA70C9B255EAF94000EB1DD /* UIButton+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Rounded.swift"; sourceTree = "<group>"; };
+		FAADC257255E88E20080CCE7 /* SportPronosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportPronosController.swift; sourceTree = "<group>"; };
 		FAD42BD525594BC5000F329F /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		FAD42BDA25594C00000F329F /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		FAD42BDF25594C28000F329F /* Bet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet.swift; sourceTree = "<group>"; };
@@ -115,6 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				FA4976D0255D8F2E00EA1C94 /* UIView+gradient.swift */,
+				FA78C2D2255EA17700DD166E /* UIView+RoundedCorner.swift */,
+				FAA70C8D255EA8B0000EB1DD /* UITextField+CustomTextFields.swift */,
+				FAA70C9B255EAF94000EB1DD /* UIButton+Rounded.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -207,6 +218,14 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
+		FAADC253255E88970080CCE7 /* SportPronos */ = {
+			isa = PBXGroup;
+			children = (
+				FAADC257255E88E20080CCE7 /* SportPronosController.swift */,
+			);
+			path = SportPronos;
+			sourceTree = "<group>";
+		};
 		FAD42BC1255943F7000F329F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,7 @@
 		FAD42BC325594411000F329F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAADC253255E88970080CCE7 /* SportPronos */,
 				FA8AE194255C25FE000C22A2 /* Account */,
 				FA8AE190255C1A32000C22A2 /* Welcome */,
 			);
@@ -402,14 +422,18 @@
 			files = (
 				FA8AE11B255A8BAC000C22A2 /* WelcomeCell.swift in Sources */,
 				FA4F37C5255940F900DB5F97 /* LoginController.swift in Sources */,
+				FAADC258255E88E20080CCE7 /* SportPronosController.swift in Sources */,
 				FAD42BE025594C28000F329F /* Bet.swift in Sources */,
 				FA4F37C1255940F900DB5F97 /* AppDelegate.swift in Sources */,
 				FA4976CC255D7DE900EA1C94 /* ModifCollectionCell.swift in Sources */,
 				FA8AE196255C261A000C22A2 /* AccountController.swift in Sources */,
 				FA8AE187255C1199000C22A2 /* NetworkManager.swift in Sources */,
 				FA8AE157255AF127000C22A2 /* PlansCollectionCell.swift in Sources */,
+				FAA70C8E255EA8B1000EB1DD /* UITextField+CustomTextFields.swift in Sources */,
 				FA8AE130255AE025000C22A2 /* PlansController.swift in Sources */,
+				FAA70C9C255EAF94000EB1DD /* UIButton+Rounded.swift in Sources */,
 				FA8AE15C255B0DD8000C22A2 /* User.swift in Sources */,
+				FA78C2D3255EA17700DD166E /* UIView+RoundedCorner.swift in Sources */,
 				FA8AE135255AE0A5000C22A2 /* PlansViewModel.swift in Sources */,
 				FA8AE173255BE85C000C22A2 /* LoginViewModel.swift in Sources */,
 				FAD42BD625594BC5000F329F /* HomeScreenController.swift in Sources */,

@@ -25,14 +25,14 @@ class ModifCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         setupUI()
         setupTextFields()
-        setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor", view: contentView)
+        contentView.setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor")
 
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         gradient.frame = contentView.bounds
-        setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor", view: contentView)
+        contentView.setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor")
     }
     
     // MARK: - UI
@@ -41,28 +41,19 @@ class ModifCollectionCell: UICollectionViewCell {
         contentView.layer.cornerRadius = 25
         contentView.layer.masksToBounds = true
         
-        modifyButton.layer.cornerRadius = 20
-        modifyButton.layer.borderWidth = 2
-        modifyButton.layer.borderColor = UIColor.gray.cgColor
-        modifyButton.layer.masksToBounds = true
+        modifyButton.roundedButton(cornerRadius: 20, borderWidth: 2, borderColor: .gray)
     }
     
     private func setupTextFields() {
-        nameTF.layer.borderColor = UIColor.gray.cgColor
-        nameTF.layer.borderWidth = 2
-        nameTF.layer.cornerRadius = 10
+        let placeholderColor = UIColor.lightGray
         
-        lastNameTF.layer.borderColor = UIColor.gray.cgColor
-        lastNameTF.layer.borderWidth = 2
-        lastNameTF.layer.cornerRadius = 10
+        nameTF.roundedTextFields(cornerRadius: 10, borderColor: .gray, borderWidth: 2, placeholder: "Prénom", placeholderColor: placeholderColor)
         
-        emailTF.layer.borderColor = UIColor.gray.cgColor
-        emailTF.layer.borderWidth = 2
-        emailTF.layer.cornerRadius = 10
+        lastNameTF.roundedTextFields(cornerRadius: 10, borderColor: .gray, borderWidth: 2, placeholder: "Nom", placeholderColor: placeholderColor)
         
-        passwordTF.layer.borderColor = UIColor.gray.cgColor
-        passwordTF.layer.borderWidth = 2
-        passwordTF.layer.cornerRadius = 10
+        emailTF.roundedTextFields(cornerRadius: 10, borderColor: .gray, borderWidth: 2, placeholder: "Email", placeholderColor: placeholderColor)
+        
+        passwordTF.roundedTextFields(cornerRadius: 10, borderColor: .gray, borderWidth: 2, placeholder: "Mot de passe", placeholderColor: placeholderColor)
     }
     
     func configure(firstName: String, lastName: String, email: String) {

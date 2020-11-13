@@ -24,29 +24,15 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setupGradient(gradient: gradient, startColor: UIColor.black.cgColor, endColor: UIColor.red.cgColor, view: view)
+        view.setupGradient(gradient: gradient, startColor: UIColor.black.cgColor, endColor: UIColor.red.cgColor)
         setupImage()
         setupTextFields()
         setupDelegateTF()
-        setupButton()
+        loginButton.roundedButton(cornerRadius: 20, borderWidth: 3, borderColor: UIColor.white)
         gladiatorAnimation()
     }
     
-    // MARK: - UI
-    
-    /// Sets up the gradient for the background
-    ///
-    /// Add a gradient as our background
-//    private func setupGradient() {
-//        let startColor = UIColor.black
-//        let endColor = UIColor.systemRed
-//        let gradient = CAGradientLayer()
-//
-//        gradient.frame = view.bounds
-//        gradient.colors = [startColor.cgColor, endColor.cgColor]
-//
-//        view.layer.insertSublayer(gradient, at: 0)
-//    }
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "homeScreenSegue" {
@@ -85,17 +71,8 @@ class LoginController: UIViewController {
         let placeholderEmail = emailTF.placeholder ?? "Email"
         let placeholderPassword = passwordTF.placeholder ?? "Mot de passe"
         
-        emailTF.attributedPlaceholder = NSAttributedString(string: placeholderEmail, attributes: [NSAttributedString.Key.foregroundColor : color])
-        emailTF.layer.cornerRadius = 10
-        emailTF.layer.borderWidth = 3
-        emailTF.layer.borderColor = UIColor.white.cgColor
-        emailTF.layer.masksToBounds = true
-        
-        passwordTF.attributedPlaceholder = NSAttributedString(string: placeholderPassword, attributes: [NSAttributedString.Key.foregroundColor : color])
-        passwordTF.layer.cornerRadius = 10
-        passwordTF.layer.borderWidth = 3
-        passwordTF.layer.borderColor = UIColor.white.cgColor
-        passwordTF.layer.masksToBounds = true
+        emailTF.roundedTextFields(cornerRadius: 10, borderColor: .white, borderWidth: 3, placeholder: placeholderEmail, placeholderColor: color)
+        passwordTF.roundedTextFields(cornerRadius: 10, borderColor: .white, borderWidth: 3, placeholder: placeholderPassword, placeholderColor: color)
     }
     
     /// Sets up the delegates for the textfields
@@ -104,21 +81,10 @@ class LoginController: UIViewController {
         passwordTF.delegate = self
     }
     
-    /// Sets up the button
-    ///
-    /// Draw a white border around the button and add rounded corner
-    private func setupButton() {
-        loginButton.layer.cornerRadius = 20
-        loginButton.layer.borderWidth = 3
-        loginButton.layer.borderColor = UIColor.white.cgColor
-        loginButton.layer.masksToBounds = true
-    }
-    
     // MARK: - Action
     @IBAction func login(_ sender: Any) {
         viewModel.login()
     }
-    
     
     // MARK: - Animations
     

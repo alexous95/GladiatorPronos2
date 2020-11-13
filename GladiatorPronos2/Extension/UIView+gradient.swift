@@ -17,12 +17,12 @@ extension UIView {
     /// - Parameter view: The view in which we will insert our gradient
     ///
     /// Add a gradient to selected view
-    func setupGradient(gradient: CAGradientLayer, startColor: CGColor, endColor: CGColor, view: UIView) {
+    func setupGradient(gradient: CAGradientLayer, startColor: CGColor, endColor: CGColor) {
         
-        gradient.frame = view.bounds
+        gradient.frame = self.bounds
         gradient.colors = [startColor, endColor]
         
-        view.layer.insertSublayer(gradient, at: 0)
+        self.layer.insertSublayer(gradient, at: 0)
     }
     
     /// Sets up a gradient for the selected view
@@ -32,7 +32,7 @@ extension UIView {
     /// - Parameter view: The view in which we will insert our gradient
     ///
     /// Add a gradient to selected view
-    func setupGradient(gradient: CAGradientLayer, startColor: String, endColor: String, view: UIView) {
+    func setupGradient(gradient: CAGradientLayer, startColor: String, endColor: String) {
         
         guard let startColor = UIColor(named: startColor) else {
             return
@@ -42,9 +42,9 @@ extension UIView {
             return
         }
         
-        gradient.frame = view.bounds
+        gradient.frame = self.bounds
         gradient.colors = [startColor.cgColor, endColor.cgColor]
         
-        view.layer.insertSublayer(gradient, at: 0)
+        self.layer.insertSublayer(gradient, at: 0)
     }
 }

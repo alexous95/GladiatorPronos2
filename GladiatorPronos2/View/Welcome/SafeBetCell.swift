@@ -33,7 +33,7 @@ class SafeBetCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradient.frame = backView.bounds
-        setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor", view: backView)
+        backView.setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor")
     }
 
     // MARK: - Configuration

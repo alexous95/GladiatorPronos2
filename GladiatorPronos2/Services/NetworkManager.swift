@@ -12,6 +12,9 @@ class NetworkManager {
     private var defaultSession = URLSession(configuration: .default)
     private var task: URLSessionDataTask?
     
+    /// Launches a network request to retrieve data with custom parameters
+    /// - Parameter request: An URLRequest object that is created in another class and is used to launch our task
+    /// - Parameter completionHandler: A closure of type (Any?, Bool) -> Void that is used to pass the received data if the network call is successful
     func launchRequest(request: URLRequest, completionHandler: @escaping((Any?, Bool) -> Void)) {
         task?.cancel()
         task = defaultSession.dataTask(with: request) { (data, response, error) in

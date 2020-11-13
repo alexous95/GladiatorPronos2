@@ -8,7 +8,7 @@
 import UIKit
 
 class AccountController: UIViewController {
-
+    
     // MARK: - Outlet
     
     @IBOutlet weak var topAccountView: UIView!
@@ -20,20 +20,22 @@ class AccountController: UIViewController {
     // MARK: - Variables
     
     let gradient = CAGradientLayer()
+    let notificationCenter = NotificationCenter.default
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundedTopView()
+        UIView.roundedCorner(cornerRadius: 35, view: topAccountView)
         setupView()
         setupDelegates()
+        addNotification()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradient.frame = topAccountView.bounds
-        setupGradient(gradient: gradient)
+        topAccountView.setupGradient(gradient: gradient, startColor: "SafeBetStartColor", endColor: "SafeBetEndColor")
     }
     
     // MARK: - Delegates
@@ -42,27 +44,29 @@ class AccountController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    // MARK: - UI
     
-    private func setupGradient(gradient: CAGradientLayer) {
-        guard let startColor = UIColor(named: "SafeBetStartColor") else {
-            return
-        }
-        guard let endColor = UIColor(named: "SafeBetEndColor") else {
-            return
-        }
-        
-        gradient.frame = topAccountView.bounds
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        
-        topAccountView.layer.insertSublayer(gradient, at: 0)
-    }
+    // MARK: - Notification
+    
+    private func addNotification() {
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name:UIResponder.keyboardWillHideNotification, object: nil)
 
-    private func roundedTopView() {
-        topAccountView.layer.cornerRadius = 35
-        topAccountView.layer.masksToBounds = true
-        
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        if let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardScreenEndFrame = keyboardValue.cgRectValue
+            let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+            
+            if notification.name == UIResponder.keyboardWillHideNotification {
+                collectionView.contentInset = .zero
+            } else {
+                collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom - 30 , right: 0)
+            }
+        }
+    }
+    
+    // MARK: - UI
     
     private func setupView() {
         let user = User.array[0]
@@ -80,7 +84,7 @@ class AccountController: UIViewController {
 
 extension AccountController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -94,23 +98,20 @@ extension AccountController: UICollectionViewDelegate, UICollectionViewDataSourc
             cell.configure(memberDate: "10 Octobre 2020", isPremium: user.isPremium , isAdmin: user.admin, plan: user.currentPlan)
             
             return cell
-        
+            
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "modifCell", for: indexPath) as? ModifCollectionCell else {
                 return UICollectionViewCell()
             }
             
+            cell.nameTF.delegate = self
+            cell.lastNameTF.delegate = self
+            cell.emailTF.delegate = self
+            cell.passwordTF.delegate = self
+            
             let user = User.array[0]
             cell.configure(firstName: user.firstName, lastName: user.lastName, email: user.email)
             
-            return cell
-            
-        case 2:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recapCell", for: indexPath) as? recapCollectionCell else {
-                return UICollectionViewCell()
-            }
-            
-            cell.configure(memberDate: "24 Octobre 2020", isPremium: false , isAdmin: false, plan: "1 mois")
             return cell
             
         default:
@@ -120,6 +121,15 @@ extension AccountController: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-            return CGSize(width: (view.frame.width / 1.3), height: (view.frame.height / 2.65))
+        return CGSize(width: (view.frame.width / 1.3), height: (view.frame.height / 2.65))
+    }
+}
+
+extension AccountController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("returned")
+        textField.resignFirstResponder()
+        return true
     }
 }
